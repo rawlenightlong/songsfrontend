@@ -5,16 +5,15 @@ import {useLoaderData} from 'react-router-dom'
 export default function Index(props){
     const songs = useLoaderData()
     console.log(songs)
-
-    return (<>
+    return (
     
     <div>
         {songs.map((song) => {
-            <div>
-                {song.name} by {song.artist}
+            return <div>
+                {song.title} by {song.artist} added by {song.username}
             </div>
         })}
     </div>
     
-    </>)
+    )
 }

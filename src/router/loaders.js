@@ -6,6 +6,6 @@ export const indexLoader = async () => {
     })
     console.log(response)
     const songs = response.json()
-    console.log(songs)
+
     return songs
 }
