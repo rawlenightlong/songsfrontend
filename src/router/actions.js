@@ -55,5 +55,5 @@ export const logoutAction = async () => {
         return redirect('/dashboard')
     }
 
-   return redirect('/')
+   return redirect('/login')
 }
