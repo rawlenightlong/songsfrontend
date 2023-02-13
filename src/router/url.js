@@ -1,3 +1,3 @@
-const url = "http://songsbackend.herokuapp.com"
+const url = "https://songsbackend.herokuapp.com"
 
 export default url
