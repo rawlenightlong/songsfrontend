@@ -58,3 +58,25 @@ export const logoutAction = async () => {
 
    return redirect('/login')
 }
+
+export const createAction = async ({request}) => {
+    const formData = await request.formData()
+    const song = {
+        artist: formData.get("artist"),
+        title: formData.get("title")
+    }
+
+    const response = await fetch(url + '/songs', {
+        method: "post",
+        headers,
+        credentials: "include",
+        body: JSON.stringify(song)
+    })
+
+    if (response.status === 400){
+        alert("Failed to create")
+        return redirect('/dashboard')
+    }
+
+    return redirect('/dashboard')
+}
